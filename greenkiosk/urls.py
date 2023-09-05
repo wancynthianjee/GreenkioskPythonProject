@@ -19,6 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("inventory/", include ("inventory.urls")),
@@ -32,6 +33,7 @@ urlpatterns = [
     path("deliverys/", include ("delivery.urls")),
 
     path("payment/", include ("payment.urls")),
+    path("api/", include ("api.urls")),
 
 
 ]

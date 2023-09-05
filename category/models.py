@@ -7,3 +7,7 @@ class Categories(models.Model):
         return Categories.objects.all()
     def __str__(self):
         return self.category_name
+    
+class Meta:
+    verbose_name = 'Category'
+    verbose_name_plural = 'Categories'

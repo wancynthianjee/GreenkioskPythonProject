@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import review_upload_view
+from .views import review_detail, review_upload_view
 from  .views import reviews_list_view
-from .views import review_detail_view
 from .views import review_update_view
 
 urlpatterns =[

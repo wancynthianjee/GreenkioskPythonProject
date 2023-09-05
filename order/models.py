@@ -13,4 +13,8 @@ class Order(models.Model):
     basket = models.OneToOneField(Cart, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     shipments = models.ManyToManyField(Delivery)
+
+class Meta:
+    verbose_name = 'Order'
+    verbose_name_plural = 'Orders'
     

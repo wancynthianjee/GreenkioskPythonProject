@@ -13,4 +13,8 @@ class Login(models.Model):
     user_name = models.CharField(max_length=50)
     email = models.EmailField()
     password = models.CharField(max_length=50)
+
+class Meta:
+    verbose_name = 'signup'
+    verbose_name_plural = 'signups'
     

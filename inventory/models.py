@@ -11,3 +11,7 @@ class Product(models.Model):
     date_created=models.DateTimeField(auto_now_add=True)
     date_updated=models.DateTimeField(auto_now=True)
     stock=models.PositiveIntegerField()
+
+class Meta:
+    verbose_name = 'inventory'
+    verbose_name_plural = 'inventories'

@@ -32,3 +32,7 @@ class Payment(models.Model):
         if not self.is_valid():
             return False
         return True
+
+class Meta:
+    verbose_name = 'payment'
+    verbose_name_plural = 'paymnets'

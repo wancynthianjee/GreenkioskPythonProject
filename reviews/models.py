@@ -7,3 +7,6 @@ class Reviews(models.Model):
         return Reviews.objects.all()
     def __str__(self):
         return self.review_name
+class Meta:
+    verbose_name = 'review'
+    verbose_name_plural = 'reviews'

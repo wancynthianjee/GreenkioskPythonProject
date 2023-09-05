@@ -6,57 +6,64 @@
     <title>django</title>
 
     <style>
-       body {
-            background-color: #baddeb;
-            font-family: Arial, sans-serif;
+        body {
+            background-color: #f0a6ca; /* Pink */
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
         }
 
         .upload_form {
-            width: 80%;
+            width: 70%;
             margin: 50px auto;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 5px;
+            background-color: #0066cc; /* Blue */
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            border-radius: 10px;
+            color: #ffffff; /* White text color */
         }
+
         label {
             display: block;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            color: #ffffff; /* White text color */
         }
 
         input[type="text"], textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 20px;
+            padding: 12px;
+            border: 2px solid #e0e0e0; /* Light Gray */
+            border-radius: 6px;
+            margin-bottom: 25px;
+            background-color: #f9f9f9; /* Very Light Gray */
+            color: #565656; /* Medium Gray */
         }
 
         button[type="submit"] {
-            background-color: #055992;
-            color: #fff;
+            background-color: #00cc66; /* Green */
+            color: #ffffff;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 8px 20px; /* Adjust padding for button size */
+            width: 100%; /* Make the button width 100% of its container */
+            border-radius: 6px;
             cursor: pointer;
+            font-weight: bold;
+            font-size: 14px; /* Adjust font size */
+            transition: background-color 0.3s ease-in-out;
         }
 
         button[type="submit"]:hover {
-            background-color: #2980b9;
+            background-color: #00994d; /* Darker Green */
         }
+
     </style>
-
-    </head>
-    <body>
+</head>
+<body>
     <form method="POST" class="upload_form">
-        {%csrf_token%} 
-        {{form.as_p}}
+        {% csrf_token %} 
+        {{ form.as_p }}
         <button type="submit">Save</button>
-
     </form>
-    
 </body>
 </html>

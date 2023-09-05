@@ -20,5 +20,8 @@ class Customer(models.Model):
                 if Customer.objects.filter(email = self.email):
                     return True
                 return False
-
+        
+class Meta:
+    verbose_name = 'Customer'
+    verbose_name_plural = 'Customers'
 
